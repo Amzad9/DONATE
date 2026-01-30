@@ -3,16 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #1e293b;
-  --primary: #4488B8;
-  --primary-dark: #3574a0;
-  --primary-light: #5a9bc8;
-  --accent: #FCBD49;
-  --accent-dark: #e8a832;
-  --accent-light: #ffd166;
-  --secondary: #F66E7B;
-  --secondary-dark: #e55a68;
-  --secondary-light: #ff8a95;
-  --success: #10b981;
+  --primary: #042E4B;
+  --primary-dark: #002b5c;
+  --primary-light: #00a0ff;
+  --accent: #fcc201;
+  --accent-dark: #e0a800;
+  --accent-light: #ffd633;
+  --secondary: #00a0ff;
+  --secondary-dark: #0088cc;
+  --secondary-light: #33b3ff;
+  --success: #9fdf87;
+  --brown: #755A53;
+  --light-gray: #EBEBEB;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;

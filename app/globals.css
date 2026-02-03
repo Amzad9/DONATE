@@ -1,42 +1,122 @@
 @import "tailwindcss";
 
+/* Red, White, Blue color scheme */
 :root {
   --background: #ffffff;
-  --foreground: #1e293b;
-  --primary: #042E4B;
-  --primary-dark: #002b5c;
-  --primary-light: #00a0ff;
-  --accent: #fcc201;
-  --accent-dark: #e0a800;
-  --accent-light: #ffd633;
-  --secondary: #00a0ff;
-  --secondary-dark: #0088cc;
-  --secondary-light: #33b3ff;
-  --success: #9fdf87;
-  --brown: #755A53;
-  --light-gray: #EBEBEB;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
+  --foreground: #1A1A1A;
+  /* Blue */
+  --navy: #0A2A66;
+  --navy-dark: #051A3D;
+  --navy-light: #0D3A7A;
+  --blue: #0A2A66;
+  --logo-blue: #1410F9;
+  /* Red - primary accent */
+  --red: #C62828;
+  --red-dark: #A02020;
+  --red-light: #E53935;
+  /* White / neutrals */
+  --light-bg: #F7F9FC;
+  --gray-50: #F7F9FC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+  --footer-bg: #0a0a0f;
+  --hero-dark: #0B0F19;
+  --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Hero particle animation */
+@keyframes hero-particle {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translate(8px, -12px) scale(1.2);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-6px, 8px) scale(0.9);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(10px, 6px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+/* Float animation for globe icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Slow pulse for glow */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-hero-particle {
+  animation: hero-particle 5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Trust stripe marquee */
+@keyframes stripe-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-stripe {
+  animation: stripe-scroll 25s linear infinite;
 }

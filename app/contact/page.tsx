@@ -151,7 +151,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium text-textMuted">Email</p>
                         <a
-                          href="mailto:support@eliteprocessing.com"
+                          href="mailto:support@donatemoneynow.com"
                           className="text-dark font-medium hover:text-primary transition-colors"
                         >
                           support@donatemoneynow.com
@@ -163,47 +163,63 @@ export default function ContactPage() {
                         <Phone className="w-5 h-5" />
                       </span>
                       <div>
-                        <p className="text-sm font-medium text-textMuted">Phone</p>
-                        <a
-                          href="tel:+15551234567"
-                          className="text-dark font-medium hover:text-primary transition-colors"
-                        >
-                          +1 (555) 123-4567
-                        </a>
+                        <p className="text-sm font-medium text-textMuted mb-1">Phone</p>
+                        <div className="space-y-1">
+                          <div>
+                            <span className="text-xs text-textMuted">Local (Hagerstown):</span>
+                            <br />
+                            <a
+                              href="tel:+12403299424"
+                              className="text-dark font-medium hover:text-primary transition-colors"
+                            >
+                              (240) 329-9424
+                            </a>
+                          </div>
+                          <div>
+                            <span className="text-xs text-textMuted">Toll-Free:</span>
+                            <br />
+                            <a
+                              href="tel:+18774158627"
+                              className="text-dark font-medium hover:text-primary transition-colors"
+                            >
+                              (877) 415-8627
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </li>
-                      <li className="flex items-start gap-4">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                          <svg
-                            className="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            aria-hidden
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                          </svg>
+                    <li className="flex items-start gap-4">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-sm font-medium text-textMuted mb-1">Visit</p>
+                        <span className="text-dark font-medium text-sm leading-relaxed">
+                          13701 Maugansville Rd #5
+                          <br />
+                          Hagerstown, MD 21740
                         </span>
-                        <div>
-                          <p className="text-sm font-medium text-textMuted">Address</p>
-                          <span className="text-dark font-medium hover:text-primary transition-colors text-sm">
-                            123 Business St, Suite 100
-                            <br />
-                            New York, NY 10001
-                          </span>
-                        </div>
-                      </li>
+                      </div>
+                    </li>
                   </ul>
                   <p className="text-sm text-textMuted mt-6 leading-relaxed">
                     We typically respond within one business day. For FEC or compliance questions, mention that in your message.

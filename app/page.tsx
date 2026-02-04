@@ -328,13 +328,13 @@ export default function Home() {
         </div>
       </section>
       {/* See how organizations succeed - 3 case study cards */}
-      <section className="py-16 lg:py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
               See how organizations succeed with Elite
             </h2>
-            <p className="text-lg text-textMuted max-w-2xl">
+            <p className="text-lg text-textMuted">
               Our pricing structure is simple. We only charge a small processing cost on donations.
             </p>
           </div>

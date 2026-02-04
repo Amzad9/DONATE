@@ -122,7 +122,7 @@ export default function Footer() {
                     href="mailto:support@eliteprocessing.com"
                     className="text-white/90 hover:text-white transition-colors text-sm"
                   >
-                    support@eliteprocessing.com
+                    support@donatemoneynow.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3">

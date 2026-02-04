@@ -154,7 +154,7 @@ export default function ContactPage() {
                           href="mailto:support@eliteprocessing.com"
                           className="text-dark font-medium hover:text-primary transition-colors"
                         >
-                          support@eliteprocessing.com
+                          support@donatemoneynow.com
                         </a>
                       </div>
                     </li>

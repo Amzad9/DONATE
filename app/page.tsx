@@ -28,7 +28,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full mx-auto">
             <div className="flex flex-col justify-center text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-4 sm:mb-6">
-                donate money now.
+                 Donate Money Now.
                 <br />
                 <span className="text-primary capitalize">fueling impact</span>
               </h1>

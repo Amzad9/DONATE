@@ -58,7 +58,7 @@ export default function SolutionsPage() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 group-hover:bg-white/20 flex items-center justify-center mx-auto mb-6 transition-colors">
                   <Building2 className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
                 </div>
-                <h2 className="text-xl font-bold text-dark group-hover:text-white mb-3 transition-colors">Political Organizations</h2>
+                <h2 className="text-xl font-bold text-dark group-hover:text-white mb-3 transition-colors">Organizations</h2>
                 <p className="text-textMuted group-hover:text-white/90 text-sm leading-relaxed transition-colors">
                   501(c)(4) organizations and political action committees.
                 </p>

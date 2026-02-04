@@ -343,7 +343,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
+              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" },
               { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" },
               { title: "How XO Marriage Transformed Donor Experience with Donate Money Now", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
             ].map((card) => (

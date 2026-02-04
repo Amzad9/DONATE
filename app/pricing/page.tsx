@@ -45,9 +45,9 @@ export default function PricingPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {/* Why Teams Choose Elite Donate */}
+              {/* Why Teams Choose Donate Money Now */}
               <div className="group bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 flex flex-col transition-all duration-200 hover:shadow-lg hover:border-primary/20">
-                <h2 className="text-lg sm:text-xl font-bold text-dark mb-4 sm:mb-6">Why Teams Choose Elite Donate</h2>
+                <h2 className="text-lg sm:text-xl font-bold text-dark mb-4 sm:mb-6">Why Teams Choose Donate Money Now</h2>
                 <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 flex-1">
                   {["No hidden fees", "No monthly fees", "Free text to give", "Quick and easy setup", "Fast and friendly support team"].map((item) => (
                     <li key={item} className="flex items-center gap-3">

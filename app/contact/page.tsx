@@ -38,7 +38,7 @@ export default function ContactPage() {
               Get in touch
             </h1>
             <p className="text-lg lg:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Have questions about Elite Donate or ready to start fundraising? We’re here to help.
+              Have questions about Donate Money Now or ready to start fundraising? We’re here to help.
             </p>
           </div>
         </section>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 We typically respond within one business day. For FEC or compliance questions, mention that in your message.
               </p>
             </div>
-            <div className="grid lg:grid-cols-3 gap-10 lg:gap-12 max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-10 lg:gap-12  mx-auto">
               {/* Contact form - 2 cols */}
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 transition-all duration-200 hover:shadow-lg hover:border-primary/20">
@@ -151,10 +151,10 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium text-textMuted">Email</p>
                         <a
-                          href="mailto:hello@elitedonate.com"
+                          href="mailto:support@eliteprocessing.com"
                           className="text-dark font-medium hover:text-primary transition-colors"
                         >
-                          hello@elitedonate.com
+                          support@eliteprocessing.com
                         </a>
                       </div>
                     </li>
@@ -165,13 +165,45 @@ export default function ContactPage() {
                       <div>
                         <p className="text-sm font-medium text-textMuted">Phone</p>
                         <a
-                          href="tel:+18005551234"
+                          href="tel:+15551234567"
                           className="text-dark font-medium hover:text-primary transition-colors"
                         >
-                          +1 (800) 555-1234
+                          +1 (555) 123-4567
                         </a>
                       </div>
                     </li>
+                      <li className="flex items-start gap-4">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                          </svg>
+                        </span>
+                        <div>
+                          <p className="text-sm font-medium text-textMuted">Address</p>
+                          <span className="text-dark font-medium hover:text-primary transition-colors text-sm">
+                            123 Business St, Suite 100
+                            <br />
+                            New York, NY 10001
+                          </span>
+                        </div>
+                      </li>
                   </ul>
                   <p className="text-sm text-textMuted mt-6 leading-relaxed">
                     We typically respond within one business day. For FEC or compliance questions, mention that in your message.

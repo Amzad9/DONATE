@@ -51,7 +51,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="hidden lg:block order-1 lg:order-2 min-h-[280px]" aria-hidden />
+            <div className="hidden lg:block order-1 lg:order-2 min-h-70" aria-hidden />
           </div>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             <div className="relative rounded-2xl overflow-hidden shadow-card aspect-4/3 lg:aspect-auto lg:min-h-[320px]">
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+                src="https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Diverse team of professionals collaborating in an office"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Finance</h2>
             <p className="text-white/90 text-lg max-w-2xl">
-              Track your donations, manage your donors, and reconcile your finances with ease. Elite Processing provides detailed reports and integrations to streamline your accounting.
+              Track your donations, manage your donors, and reconcile your finances with ease. Donate Money Now provides detailed reports and integrations to streamline your accounting.
             </p>
           </div>
           {/* Lighter blue line above cards */}
@@ -165,7 +165,7 @@ export default function Home() {
           <div className="mb-10">
             <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">What We Deliver</h2>
             <p className="text-lg text-textMuted max-w-2xl">
-              Elite Processing provides all the tools you need to receive online donations, manage your donors, and track your fundraising progress, all in one place.
+              Donate Money Now provides all the tools you need to receive online donations, manage your donors, and track your fundraising progress, all in one place.
             </p>
           </div>
 
@@ -235,14 +235,14 @@ export default function Home() {
               </Link>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative bg-white rounded-2xl p-10 shadow-card border border-gray-200/60 text-center min-w-[300px] max-w-sm overflow-hidden">
+              <div className="relative rounded-2xl p-10 shadow-card border border-darkSoft text-center min-w-[300px] max-w-sm overflow-hidden">
                 {/* Subtle accent gradient at top */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-dark" aria-hidden />
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
                   <TrendingUp className="w-7 h-7 text-primary" />
                 </div>
                 <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">$2.5B+</p>
-                <p className="text-textMuted text-base font-medium mb-6">Raised through Elite Processing</p>
+                <p className="text-textMuted text-base font-medium mb-6">Raised through Donate Money Now</p>
                 <div className="pt-4 border-t border-gray-100">
                   <p className="text-xs font-semibold text-primary uppercase tracking-wider">Trusted by 10,000+ campaigns</p>
                 </div>
@@ -252,42 +252,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
-              Trusted by campaigns and nonprofits
-            </h2>
-            <p className="text-lg text-textMuted max-w-2xl mx-auto leading-relaxed">
-              Real results from real campaigns. See how our platform helps achieve fundraising goals and FEC compliance.
-            </p>
-          </div>
+     <section className="py-20 lg:py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-1">
+                Trusted by campaigns and nonprofits
+              </h2>
+              <p className="text-lg text-textMuted max-w-2xl mx-auto leading-relaxed">
+                Real results from real campaigns. See how our platform helps achieve fundraising goals and FEC compliance.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
-              <p className="text-light leading-relaxed mb-6 text-base">
-                &ldquo;Elite Donate transformed our campaign fundraising. FEC reporting is automatic, and we raised 300% more than our previous cycle. The platform is built for political campaigns.&rdquo;
-              </p>
-              <p className="font-semibold text-dark text-base">Campaign Manager</p>
-              <p className="text-black text-sm mt-1">Federal Senate Campaign, Texas</p>
-            </div>
-            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
-              <p className="text-light leading-relaxed mb-6 text-base">
-                &ldquo;The FEC compliance features saved us countless hours. Contribution limits are automatically tracked, and reporting is seamless. Highly recommend for any political campaign.&rdquo;
-              </p>
-              <p className="font-semibold text-black text-base">Finance Director</p>
-              <p className="text-black text-sm mt-1">State House Campaign, California</p>
-            </div>
-            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
-              <p className="text-light leading-relaxed mb-6 text-base">
-                &ldquo;Our nonprofit saw a 5x increase in recurring donations. The donor management tools are excellent, and the support team understands our compliance needs.&rdquo;
-              </p>
-              <p className="font-semibold text-black text-base">Executive Director</p>
-              <p className="text-black text-sm mt-1">501(c)(3) Advocacy Organization</p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="group bg-white rounded-2xl p-8 lg:p-10 text-center shadow-card border border-gray-200/60 transition-all duration-200 hover:shadow-lg hover:bg-primary hover:border-primary">
+                <p className="text-textMuted group-hover:text-white/90 leading-relaxed mb-6 text-base">
+                  &ldquo;Donate transformed our campaign fundraising. FEC reporting is automatic, and we raised 300% more than our previous cycle. The platform is built for political campaigns.&rdquo;
+                </p>
+                <p className="font-semibold text-dark group-hover:text-white mb-1 transition-colors">Campaign Manager</p>
+                <p className="text-textMuted group-hover:text-white/90 text-sm">Federal Senate Campaign, Texas</p>
+              </div>
+
+              <div className="group bg-white rounded-2xl p-8 lg:p-10 text-center shadow-card border border-gray-200/60 transition-all duration-200 hover:shadow-lg hover:bg-primary hover:border-primary">
+                <p className="text-textMuted group-hover:text-white/90 leading-relaxed mb-6 text-base">
+                  &ldquo;The FEC compliance features saved us countless hours. Contribution limits are automatically tracked, and reporting is seamless. Highly recommend for any political campaign.&rdquo;
+                </p>
+                <p className="font-semibold text-dark group-hover:text-white mb-1 transition-colors">Finance Director</p>
+                <p className="text-textMuted group-hover:text-white/90 text-sm">State House Campaign, California</p>
+              </div>
+
+              <div className="group bg-white rounded-2xl p-8 lg:p-10 text-center shadow-card border border-gray-200/60 transition-all duration-200 hover:shadow-lg hover:bg-primary hover:border-primary">
+                <p className="text-textMuted group-hover:text-white/90 leading-relaxed mb-6 text-base">
+                  &ldquo;Our nonprofit saw a 5x increase in recurring donations. The donor management tools are excellent, and the support team understands our compliance needs.&rdquo;
+                </p>
+                <p className="font-semibold text-dark group-hover:text-white mb-1 transition-colors">Executive Director</p>
+                <p className="text-textMuted group-hover:text-white/90 text-sm">501(c)(3) Advocacy Organization</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
          {/* Trust badges / logos - scrolling stripe (theme: navy + red) */}
          <section className="py-12 bg-darkSoft overflow-hidden">
         <p className="text-center text-sm font-medium text-white/90 uppercase tracking-wider mb-6">
@@ -332,7 +334,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
-              See how organizations succeed with Elite
+              See how organizations succeed with Donate Money Now
             </h2>
             <p className="text-lg text-textMuted">
               Our pricing structure is simple. We only charge a small processing cost on donations.
@@ -341,9 +343,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Elite's tools.", img: "https://images.unsplash.com/photo-1540914124281-342587941389?w=600&q=80" },
-              { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Elite's tools.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" },
-              { title: "How XO Marriage Transformed Donor Experience with Elite", desc: "Learn how a local campaign increased donations by 300% using Elite's tools.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1540914124281-342587941389?w=600&q=80" },
+              { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" },
+              { title: "How XO Marriage Transformed Donor Experience with Donate Money Now", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
             ].map((card) => (
               <article key={card.title} className="bg-white rounded-2xl overflow-hidden shadow-card flex flex-col">
                 <div className="relative aspect-video w-full">
@@ -466,14 +468,14 @@ export default function Home() {
             Ready to start fundraising?
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Join thousands of campaigns and nonprofits using Elite Donate. FEC compliant. Secure. Trusted.
+            Join thousands of campaigns and nonprofits using Donate Money Now. FEC compliant. Secure. Trusted.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#start"
               className="inline-flex justify-center items-center px-10 py-4 rounded-lg font-semibold text-lg bg-darkSoft hover:bg-darkSoft text-white transition-colors shadow-card"
             >
-              Get Started with Elite Donate
+              Get Started with Donate Money Now
             </Link>
             <Link
               href="#solutions"

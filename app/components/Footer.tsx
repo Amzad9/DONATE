@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="bg-darkSoft text-white pt-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
           <h2 className="text-xl sm:text-2xl font-bold text-left">
-            Get started with Elite Processing
+            Donate Money Now
           </h2>
           <Link
             href="/#start"
@@ -30,7 +30,7 @@ export default function Footer() {
             <div>
               <Link href="/" className="inline-block relative h-10 w-50 sm:h-12 sm:w-[240px] mb-4">
                 <Image
-                  src="/logo-h2 1.png"
+                  src="/DMNLogo.png"
                   alt="Donate Money Now"
                   className="object-contain object-left"
                   width={240}
@@ -232,7 +232,7 @@ export default function Footer() {
           {/* Bottom: Copyright + Legal */}
           <div className="border-t border-white/20 pt-3 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-white/80 text-sm order-2 sm:order-1">
-              © {new Date().getFullYear()} Elite Processing. All rights reserved.
+             Donate Money Now © {new Date().getFullYear()}. All rights reserved.
             </p>
             <div className="flex items-center gap-2 text-sm order-1 sm:order-2">
               <Link href="/privacy" className="text-white/80 hover:text-white transition-colors">

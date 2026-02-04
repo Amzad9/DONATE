@@ -30,13 +30,13 @@ export default function SolutionsPage() {
             </p>
           </div>
         </section>
-
+      
         {/* Our Solutions - 4 cards, Federal highlighted (same design as home) */}
         <section className="py-16 lg:py-16 bg-light">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10 lg:mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">Purpose-built for every organization</h2>
-              <p className="text-lg text-textMuted max-w-2xl">
+              <p className="text-lg text-textMuted">
                 Get started in minutes with our purpose-built solutions for every type of organization.
               </p>
             </div>

@@ -20,96 +20,77 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-
-      {/* Hero Section - hero.jpg as full background */}
-      <section className="relative mt-18 py-20">
-        {/* Background image */}
-        <div className="absolute inset-0" aria-hidden>
-          <Image
-            src="/hero.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-        {/* Dark overlay for text readability */}
-        {/* <div className="absolute inset-0 bg-[var(--hero-dark)]/75" aria-hidden /> */}
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex items-center ">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch w-full min-h-[calc(90vh-10rem)] lg:min-h-[calc(85vh-10rem)]">
-            {/* Left Column - Copy + CTAs, vertically centered */}
+      <section
+        className="relative mt-18 min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[80vh] py-12 sm:py-16 lg:py-20 flex items-center"
+        style={{ backgroundImage: "url('/hero4.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full mx-auto">
             <div className="flex flex-col justify-center text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-4xl sm:text-5xl capitalize lg:text-6xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6">
-              donate money now.
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-4 sm:mb-6">
+                donate money now.
                 <br />
-                <span className="text-white capitalize">fueling impact</span>
+                <span className="text-primary capitalize">fueling impact</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 font-medium">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8 lg:mb-10 font-medium px-0">
                 Powerful Fundraising Software for Campaigns, Churches, & Non-Profits
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <Link
                   href="#learn"
-                  className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base border-2 border-(--red) text-(--red) hover:bg-(--red)/10 transition-colors"
+                  className="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold text-sm sm:text-base border-2 border-primary text-primary hover:bg-primary/10 transition-colors"
                 >
                   Learn More
                 </Link>
                 <Link
                   href="#demo"
-                  className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base bg-(--red) hover:bg-(--red-dark) text-white transition-colors"
+                  className="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold text-sm sm:text-base bg-primary hover:bg-primary-dark text-white transition-colors"
                 >
                   Schedule a Demo
                 </Link>
               </div>
             </div>
-
-            {/* Right column - empty so background shows through */}
-            <div className="hidden lg:block order-1 lg:order-2 min-h-[320px]" aria-hidden />
+            <div className="hidden lg:block order-1 lg:order-2 min-h-[280px]" aria-hidden />
           </div>
         </div>
       </section>
 
-      {/* Solutions & Transparency - 3 cards + 2-column block */}
-      <section className="py-16 lg:py-24 bg-(--light-bg)">
+      <section className="py-16 lg:py-16 bg-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top row - 3 feature cards */}
           <div className="grid sm:grid-cols-3 gap-6 lg:gap-8 mb-10 lg:mb-12">
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-(--navy)/10 flex items-center justify-center">
-                <svg className="w-8 h-8 text-(--navy)" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <div className="group bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 text-center transition-all duration-200 hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center transition-colors group-hover:bg-primary/15">
+                <svg className="w-9 h-9 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">Political Campaigns:</h3>
-              <p className="text-base text-[var(--gray-600)]">Mobilize Your Base</p>
+              <h3 className="text-lg font-bold text-dark mb-1.5">Political Campaigns</h3>
+              <p className="text-base text-textMuted">Mobilize Your Base</p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-(--navy)/10 flex items-center justify-center">
-                <svg className="w-8 h-8 text-(--navy)" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <div className="group bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 text-center transition-all duration-200 hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center transition-colors group-hover:bg-primary/15">
+                <svg className="w-9 h-9 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">Churches & Non-Profits:</h3>
-              <p className="text-base text-[var(--gray-600)]">Grow Your Community</p>
+              <h3 className="text-lg font-bold text-dark mb-1.5">Churches & Non-Profits</h3>
+              <p className="text-base text-textMuted">Grow Your Community</p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-(--navy)/10 flex items-center justify-center">
-                <svg className="w-8 h-8 text-(--navy)" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <div className="group bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 text-center transition-all duration-200 hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center transition-colors group-hover:bg-primary/15">
+                <svg className="w-9 h-9 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">Secure & Easy</h3>
-              <p className="text-base text-[var(--gray-600)]">Process Donations</p>
+              <h3 className="text-lg font-bold text-dark mb-1.5">Secure & Easy</h3>
+              <p className="text-base text-textMuted">Process Donations</p>
             </div>
           </div>
 
-          {/* Bottom - 2 columns: image left, transparency panel right */}
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
-            <div className="relative rounded-2xl overflow-hidden shadow-(--shadow-card) aspect-4/3 lg:aspect-auto lg:min-h-[320px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-card aspect-4/3 lg:aspect-auto lg:min-h-[320px]">
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
                 alt="Diverse team of professionals collaborating in an office"
@@ -118,7 +99,7 @@ export default function Home() {
                 className="object-cover object-center"
               />
             </div>
-            <div className="bg-(--hero-dark) rounded-2xl p-8 lg:p-10 shadow-(--shadow-card) flex flex-col justify-center">
+            <div className="bg-darkSoft rounded-2xl p-8 lg:p-10 shadow-card flex flex-col justify-center">
               <h2 className="text-xl lg:text-2xl font-bold text-white capitalize tracking-tight mb-4">
               our commitment to transparency
               </h2>
@@ -127,7 +108,7 @@ export default function Home() {
               </p>
               <Link
                 href="/#story"
-                className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base bg-(--red) hover:bg-(--red-dark) text-white transition-colors w-fit"
+                className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base bg-primary hover:bg-primary-dark text-white transition-colors w-fit"
               >
                 Read Our Story
               </Link>
@@ -136,8 +117,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Finance - royal blue section with 3 white cards */}
-      <section className="py-16 lg:py-24 bg-[var(--navy)]">
+      <section className="py-16 bg-darkSoft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Finance</h2>
@@ -146,32 +126,32 @@ export default function Home() {
             </p>
           </div>
           {/* Lighter blue line above cards */}
-          <div className="border-t border-[var(--navy-light)]/60 mb-0 pt-0" aria-hidden />
+          <div className=" mb-0 pt-0" aria-hidden />
           <div className="grid md:grid-cols-3 gap-6 -mt-px">
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-16 h-16 rounded-full bg-(--light-bg) flex items-center justify-center mx-auto mb-5">
-                <BarChart3 className="w-8 h-8 text-(--navy)" />
+            <div className="bg-white rounded-2xl p-8 shadow-shadow-soft text-center">
+              <div className="w-16 h-16 rounded-full bg-light flex items-center justify-center mx-auto mb-5">
+                <BarChart3 className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Reporting</h3>
-              <p className="text-[var(--gray-600)] text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-dark mb-3">Reporting</h3>
+              <p className="text-textMuted text-sm leading-relaxed">
                 Access detailed reports on donations, donors, and campaigns with real-time analytics.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-16 h-16 rounded-full bg-(--light-bg) flex items-center justify-center mx-auto mb-5">
-                <RefreshCw className="w-8 h-8 text-(--navy)" />
+            <div className="bg-white rounded-2xl p-8 shadow-card text-center">
+              <div className="w-16 h-16 rounded-full bg-light flex items-center justify-center mx-auto mb-5">
+                <RefreshCw className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Reconciliation</h3>
-              <p className="text-[var(--gray-600)] text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-dark mb-3">Reconciliation</h3>
+              <p className="text-textMuted text-sm leading-relaxed">
                 Easily reconcile your finances with bank statements and accounting software integrations.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-[var(--shadow-card)] text-center">
-              <div className="w-16 h-16 rounded-full bg-(--light-bg) flex items-center justify-center mx-auto mb-5">
-                <Shield className="w-8 h-8 text-(--navy)" />
+            <div className="bg-white rounded-2xl p-8 shadow-card text-center">
+              <div className="w-16 h-16 rounded-full bg-light flex items-center justify-center mx-auto mb-5">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">Security</h3>
-              <p className="text-[var(--gray-600)] text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-dark mb-3">Security</h3>
+              <p className="text-textMuted text-sm leading-relaxed">
                 Protect donor data with industry-leading security measures and compliance standards.
               </p>
             </div>
@@ -180,11 +160,11 @@ export default function Home() {
       </section>
 
       {/* What We Deliver - white section with tabs + 2-column content */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4">What We Deliver</h2>
-            <p className="text-lg text-[var(--gray-600)] max-w-2xl">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">What We Deliver</h2>
+            <p className="text-lg text-textMuted max-w-2xl">
               Elite Processing provides all the tools you need to receive online donations, manage your donors, and track your fundraising progress, all in one place.
             </p>
           </div>
@@ -199,8 +179,8 @@ export default function Home() {
                   onClick={() => setActiveDeliverTab(tab.id)}
                   className={`px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors ${
                     activeDeliverTab === tab.id
-                      ? "text-(--red) border-b-2 border-(--red)"
-                      : "text-[var(--gray-600)] hover:text-[#1A1A1A] border-b-2 border-transparent"
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-textMuted hover:text-dark border-b-2 border-transparent"
                   }`}
                 >
                   {tab.label}
@@ -211,7 +191,7 @@ export default function Home() {
 
           {/* Two-column content */}
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)] aspect-video lg:min-h-[320px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-card aspect-video lg:min-h-[320px]">
               <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
                 alt="Analytics and data dashboard"
@@ -224,8 +204,8 @@ export default function Home() {
               {WHAT_WE_DELIVER_TABS.map((tab) =>
                 activeDeliverTab === tab.id ? (
                   <div key={tab.id}>
-                    <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">{tab.content.title}</h3>
-                    <p className="text-[var(--gray-600)] text-lg leading-relaxed">
+                    <h3 className="text-2xl font-bold text-dark mb-4">{tab.content.title}</h3>
+                    <p className="text-textMuted text-lg leading-relaxed">
                       {tab.content.body}
                     </p>
                   </div>
@@ -237,36 +217,34 @@ export default function Home() {
       </section>
 
       {/* Fueled by Grassroots Donors - 2 columns: copy + metric callout */}
-      <section className="py-16 lg:py-24 bg-(--light-bg)">
+      <section className="py-16 lg:py-16 bg-darkSoft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] leading-tight mb-6">
-                Fueled by Grassroots
-                <br />
-                Donors
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary leading-tight mb-6">
+                Fueled by Grassroots Donors
               </h2>
-              <p className="text-lg text-[var(--gray-600)] leading-relaxed mb-8">
+              <p className="text-lg text-light leading-relaxed mb-8">
                 People-powered movements aren&apos;t just inspiring; they&apos;re effective. We know that democracy functions best when more people participate and when campaigns, organizations, and nonprofits are powered by the people they serve.
               </p>
               <Link
                 href="#learn"
-                className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base border-2 border-(--red) text-(--red) hover:bg-(--red)/10 transition-colors"
+                className="inline-flex justify-center items-center px-8 py-4 rounded-lg font-semibold text-base border-2 border-primary text-primary hover:bg-primary/10 transition-colors"
               >
                 Learn More
               </Link>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative bg-white rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60 text-center min-w-[300px] max-w-sm overflow-hidden">
+              <div className="relative bg-white rounded-2xl p-10 shadow-card border border-gray-200/60 text-center min-w-[300px] max-w-sm overflow-hidden">
                 {/* Subtle accent gradient at top */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-(--red) to-(--navy)" aria-hidden />
-                <div className="w-14 h-14 rounded-full bg-(--red)/10 flex items-center justify-center mx-auto mb-5">
-                  <TrendingUp className="w-7 h-7 text-(--red)" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-dark" aria-hidden />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                  <TrendingUp className="w-7 h-7 text-primary" />
                 </div>
-                <p className="text-4xl lg:text-5xl font-bold text-(--navy) mb-2">$2.5B+</p>
-                <p className="text-[var(--gray-600)] text-base font-medium mb-6">Raised through Elite Processing</p>
+                <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">$2.5B+</p>
+                <p className="text-textMuted text-base font-medium mb-6">Raised through Elite Processing</p>
                 <div className="pt-4 border-t border-gray-100">
-                  <p className="text-xs font-semibold text-(--red) uppercase tracking-wider">Trusted by 10,000+ campaigns</p>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Trusted by 10,000+ campaigns</p>
                 </div>
               </div>
             </div>
@@ -274,50 +252,89 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
               Trusted by campaigns and nonprofits
             </h2>
-            <p className="text-lg text-[var(--gray-600)] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-textMuted max-w-2xl mx-auto leading-relaxed">
               Real results from real campaigns. See how our platform helps achieve fundraising goals and FEC compliance.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60">
-              <p className="text-[#1A1A1A] leading-relaxed mb-6 text-base">
+            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
+              <p className="text-light leading-relaxed mb-6 text-base">
                 &ldquo;Elite Donate transformed our campaign fundraising. FEC reporting is automatic, and we raised 300% more than our previous cycle. The platform is built for political campaigns.&rdquo;
               </p>
-              <p className="font-semibold text-[#1A1A1A] text-base">Campaign Manager</p>
-              <p className="text-[var(--gray-600)] text-sm mt-1">Federal Senate Campaign, Texas</p>
+              <p className="font-semibold text-dark text-base">Campaign Manager</p>
+              <p className="text-black text-sm mt-1">Federal Senate Campaign, Texas</p>
             </div>
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60">
-              <p className="text-[#1A1A1A] leading-relaxed mb-6 text-base">
+            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
+              <p className="text-light leading-relaxed mb-6 text-base">
                 &ldquo;The FEC compliance features saved us countless hours. Contribution limits are automatically tracked, and reporting is seamless. Highly recommend for any political campaign.&rdquo;
               </p>
-              <p className="font-semibold text-[#1A1A1A] text-base">Finance Director</p>
-              <p className="text-[var(--gray-600)] text-sm mt-1">State House Campaign, California</p>
+              <p className="font-semibold text-black text-base">Finance Director</p>
+              <p className="text-black text-sm mt-1">State House Campaign, California</p>
             </div>
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60">
-              <p className="text-[#1A1A1A] leading-relaxed mb-6 text-base">
+            <div className="bg-primary rounded-2xl p-10 shadow-card border border-gray-200/60">
+              <p className="text-light leading-relaxed mb-6 text-base">
                 &ldquo;Our nonprofit saw a 5x increase in recurring donations. The donor management tools are excellent, and the support team understands our compliance needs.&rdquo;
               </p>
-              <p className="font-semibold text-[#1A1A1A] text-base">Executive Director</p>
-              <p className="text-[var(--gray-600)] text-sm mt-1">501(c)(3) Advocacy Organization</p>
+              <p className="font-semibold text-black text-base">Executive Director</p>
+              <p className="text-black text-sm mt-1">501(c)(3) Advocacy Organization</p>
             </div>
           </div>
         </div>
       </section>
+         {/* Trust badges / logos - scrolling stripe (theme: navy + red) */}
+         <section className="py-12 bg-darkSoft overflow-hidden">
+        <p className="text-center text-sm font-medium text-white/90 uppercase tracking-wider mb-6">
+          Trusted by campaigns and organizations nationwide
+        </p>
+        <div className="relative w-full overflow-hidden">
+          {/* Edge fades */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-darkSoft to-transparent z-10 pointer-events-none" aria-hidden />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-darkSoft to-transparent z-10 pointer-events-none" aria-hidden />
+          <div className="flex animate-stripe gap-10 whitespace-nowrap py-3" style={{ width: "max-content" }}>
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={setIndex} className="flex gap-10 items-center shrink-0">
+                {["Political Campaigns", "PACs & Committees", "501(c)(3) Nonprofits", "501(c)(4) Organizations", "Advocacy Groups", "PCI DSS Compliant", "Bank-level encryption", "FEC Compliant"].map((label) => (
+                  <span key={`${setIndex}-${label}`} className="flex items-center gap-10 text-base font-semibold text-white">
+                    <span>{label}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden />
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-white/10">
+          <div className="flex flex-wrap justify-center gap-8 text-sm text-white/85">
+            <span className="flex items-center gap-2 font-medium">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              PCI DSS Compliant
+            </span>
+            <span className="flex items-center gap-2 font-medium">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+              Bank-level encryption
+            </span>
+            <span className="flex items-center gap-2 font-medium">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              FEC Compliant
+            </span>
+          </div>
+        </div>
+      </section>
       {/* See how organizations succeed - 3 case study cards */}
-      <section className="py-16 lg:py-24 bg-(--light-bg)">
+      <section className="py-16 lg:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
               See how organizations succeed with Elite
             </h2>
-            <p className="text-lg text-[var(--gray-600)] max-w-2xl">
+            <p className="text-lg text-textMuted max-w-2xl">
               Our pricing structure is simple. We only charge a small processing cost on donations.
             </p>
           </div>
@@ -328,14 +345,14 @@ export default function Home() {
               { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Elite's tools.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" },
               { title: "How XO Marriage Transformed Donor Experience with Elite", desc: "Learn how a local campaign increased donations by 300% using Elite's tools.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
             ].map((card) => (
-              <article key={card.title} className="bg-white rounded-2xl overflow-hidden shadow-[var(--shadow-card)] flex flex-col">
+              <article key={card.title} className="bg-white rounded-2xl overflow-hidden shadow-card flex flex-col">
                 <div className="relative aspect-video w-full">
                   <Image src={card.img} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">{card.title}</h3>
-                  <p className="text-[var(--gray-600)] text-sm leading-relaxed mb-4 flex-1">{card.desc}</p>
-                  <Link href="#stories" className="text-(--red) font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                  <h3 className="text-lg font-bold text-dark mb-2">{card.title}</h3>
+                  <p className="text-textMuted text-sm leading-relaxed mb-4 flex-1">{card.desc}</p>
+                  <Link href="#stories" className="text-primary font-semibold text-sm hover:underline inline-flex items-center gap-1">
                     Learn More
                   </Link>
                 </div>
@@ -345,130 +362,92 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust badges / logos - scrolling stripe (theme: navy + red) */}
-      <section className="py-12 bg-(--navy) overflow-hidden">
-        <p className="text-center text-sm font-medium text-white/90 uppercase tracking-wider mb-6">
-          Trusted by campaigns and organizations nationwide
-        </p>
-        <div className="relative w-full overflow-hidden">
-          {/* Edge fades */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-(--navy) to-transparent z-10 pointer-events-none" aria-hidden />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-(--navy) to-transparent z-10 pointer-events-none" aria-hidden />
-          <div className="flex animate-stripe gap-10 whitespace-nowrap py-3" style={{ width: "max-content" }}>
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-10 items-center shrink-0">
-                {["Political Campaigns", "PACs & Committees", "501(c)(3) Nonprofits", "501(c)(4) Organizations", "Advocacy Groups", "PCI DSS Compliant", "Bank-level encryption", "FEC Compliant"].map((label) => (
-                  <span key={`${setIndex}-${label}`} className="flex items-center gap-10 text-base font-semibold text-white">
-                    <span>{label}</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-(--red) shrink-0" aria-hidden />
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-white/10">
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-white/85">
-            <span className="flex items-center gap-2 font-medium">
-              <svg className="w-5 h-5 text-(--red)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-              PCI DSS Compliant
-            </span>
-            <span className="flex items-center gap-2 font-medium">
-              <svg className="w-5 h-5 text-(--red)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-              Bank-level encryption
-            </span>
-            <span className="flex items-center gap-2 font-medium">
-              <svg className="w-5 h-5 text-(--red)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-              FEC Compliant
-            </span>
-          </div>
-        </div>
-      </section>
+   
       
 
       {/* Who We Serve */}
       {/* <section id="solutions" className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
               Who We Serve
             </h2>
-            <p className="text-lg text-[var(--gray-600)] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-textMuted max-w-2xl mx-auto leading-relaxed">
               Purpose-built fundraising solutions for political campaigns, nonprofits, and advocacy organizations. Launch in minutes and raise more.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60 hover:shadow-[var(--shadow-lg)] transition-shadow">
-              <div className="w-14 h-14 rounded-xl bg-[var(--navy)] flex items-center justify-center mb-6">
+            <div className="bg-graySoft rounded-2xl p-10 shadow-card border border-gray-200/60 hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 rounded-xl bg-darkSoft flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">Political Campaigns</h3>
-              <p className="text-[var(--gray-600)] leading-relaxed text-base mb-4">
+              <h3 className="text-2xl font-bold text-dark mb-4">Political Campaigns</h3>
+              <p className="text-textMuted leading-relaxed text-base mb-4">
                 Federal, state, and local campaigns. FEC compliant reporting, contribution limits, and donor management built for political fundraising.
               </p>
-              <ul className="space-y-2 text-sm text-[var(--gray-600)]">
+              <ul className="space-y-2 text-sm text-textMuted">
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>Federal campaigns & PACs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>State & local races</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>FEC compliance tools</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60 hover:shadow-[var(--shadow-lg)] transition-shadow">
-              <div className="w-14 h-14 rounded-xl bg-[var(--navy)] flex items-center justify-center mb-6">
+            <div className="bg-graySoft rounded-2xl p-10 shadow-card border border-gray-200/60 hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 rounded-xl bg-darkSoft flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">Nonprofits</h3>
-              <p className="text-[var(--gray-600)] leading-relaxed text-base mb-4">
+              <h3 className="text-2xl font-bold text-dark mb-4">Nonprofits</h3>
+              <p className="text-textMuted leading-relaxed text-base mb-4">
                 501(c)(3) and 501(c)(4) organizations. Donor management, recurring giving, and compliance reporting for mission-driven fundraising.
               </p>
-              <ul className="space-y-2 text-sm text-[var(--gray-600)]">
+              <ul className="space-y-2 text-sm text-textMuted">
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>501(c)(3) charities</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>501(c)(4) advocacy groups</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>Donor management tools</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-[var(--light-bg)] rounded-2xl p-10 shadow-[var(--shadow-card)] border border-gray-200/60 hover:shadow-[var(--shadow-lg)] transition-shadow">
-              <div className="w-14 h-14 rounded-xl bg-[var(--navy)] flex items-center justify-center mb-6">
+            <div className="bg-graySoft rounded-2xl p-10 shadow-card border border-gray-200/60 hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 rounded-xl bg-darkSoft flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">Advocacy</h3>
-              <p className="text-[var(--gray-600)] leading-relaxed text-base mb-4">
+              <h3 className="text-2xl font-bold text-dark mb-4">Advocacy</h3>
+              <p className="text-textMuted leading-relaxed text-base mb-4">
                 Issue advocacy, ballot initiatives, and grassroots movements. Powerful tools to mobilize supporters and raise funds for your cause.
               </p>
-              <ul className="space-y-2 text-sm text-[var(--gray-600)]">
+              <ul className="space-y-2 text-sm text-textMuted">
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>Ballot initiatives</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>Issue advocacy campaigns</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[var(--red)] mt-1">•</span>
+                  <span className="text-primary mt-1">•</span>
                   <span>Grassroots organizing</span>
                 </li>
               </ul>
@@ -481,7 +460,7 @@ export default function Home() {
   
 
       {/* Final CTA */}
-      <section id="contact" className="py-24 lg:py-32 bg-[var(--navy)]">
+      <section id="contact" className="py-16  bg-primary-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to start fundraising?
@@ -492,7 +471,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#start"
-              className="inline-flex justify-center items-center px-10 py-4 rounded-lg font-semibold text-lg bg-[var(--red)] hover:bg-[var(--red-dark)] text-white transition-colors shadow-[var(--shadow-card)]"
+              className="inline-flex justify-center items-center px-10 py-4 rounded-lg font-semibold text-lg bg-darkSoft hover:bg-darkSoft text-white transition-colors shadow-card"
             >
               Get Started with Elite Donate
             </Link>

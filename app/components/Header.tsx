@@ -29,18 +29,18 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="fixed w-full top-0 z-[100] bg-[var(--hero-dark)] border-b border-white/10">
+    <header className="fixed w-full top-0 z-100 bg-darkSoft border-b border-white/10">
       <nav
-        className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 relative z-[100] ${
-          isScrolled ? "py-3" : "py-4"
+        className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 relative z-100 ${
+          isScrolled ? "py-0" : "py-1"
         }`}
       >
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="block relative h-9 w-[180px] sm:h-10 sm:w-[200px]">
+            <Link href="/" className="block relative  w-45 sm:h-20 sm:w-50">
               <Image
-                src="/logo.jpg"
+                src="/logo-h2 1.png"
                 alt="Donate Money Now"
                 fill
                 className="object-contain object-left"
@@ -88,7 +88,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <Link
               href="/#start"
-              className="bg-(--red) hover:bg-(--red-dark) text-white px-6 py-2.5 rounded-lg font-semibold text-[15px] transition-colors"
+              className="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-[15px] transition-colors"
             >
               Start Donating
             </Link>
@@ -134,7 +134,7 @@ export default function Header() {
 
         {/* Mobile Menu - dark theme */}
         <div
-          className={`lg:hidden absolute left-0 right-0 top-full bg-[var(--hero-dark)] border-b border-white/10 shadow-xl transition-all duration-300 ease-in-out ${
+          className={`lg:hidden absolute left-0 right-0 top-full bg-darkSoft border-b border-white/10 shadow-xl transition-all duration-300 ease-in-out ${
             isMobileMenuOpen
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible -translate-y-2 pointer-events-none"
@@ -182,7 +182,7 @@ export default function Header() {
                 <Link
                   href="/#start"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-center bg-(--red) hover:bg-(--red-dark) text-white py-3 px-6 rounded-lg font-semibold transition-colors"
+                  className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-semibold transition-colors"
                 >
                   Start Donating
                 </Link>

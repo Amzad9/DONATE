@@ -1,47 +1,42 @@
 @import "tailwindcss";
 
-/* Red, White, Blue color scheme */
+/* Project color theme - use in className via var(--name) */
 :root {
-  --background: #ffffff;
-  --foreground: #1A1A1A;
-  /* Blue */
-  --navy: #0A2A66;
-  --navy-dark: #051A3D;
-  --navy-light: #0D3A7A;
-  --blue: #0A2A66;
-  --logo-blue: #1410F9;
-  /* Red - primary accent */
-  --red: #C62828;
-  --red-dark: #A02020;
-  --red-light: #E53935;
-  /* White / neutrals */
-  --light-bg: #F7F9FC;
-  --gray-50: #F7F9FC;
-  --gray-100: #F1F5F9;
-  --gray-200: #E2E8F0;
-  --gray-400: #94A3B8;
-  --gray-500: #64748B;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1E293B;
-  --gray-900: #0F172A;
-  --footer-bg: #0a0a0f;
-  --hero-dark: #0B0F19;
-  --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
-  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  /* Primary brand - buttons, links, highlights, icons */
+  --primary: #2DA2B5;
+  --primary-dark: #258a9a;
+  /* Dark UI - hero, navbar, footer, panels */
+  --dark: #06151E;
+  --darkSoft: #233037;
+  /* Section backgrounds */
+  --light: #FBFDFD;
+  --graySoft: #D5D8DB;
+  /* Text */
+  --textMuted: #7C7979;
+  /* Shadows */
+  --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-card: 0 4px 12px -1px rgb(0 0 0 / 0.08), 0 2px 6px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 24px -3px rgb(0 0 0 / 0.1), 0 4px 8px -4px rgb(0 0 0 / 0.06);
 }
 
+/* Theme values must be literal for Tailwind to generate bg-primary, text-primary, etc. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-primary: #2DA2B5;
+  --color-primary-dark: #258a9a;
+  --color-dark: #06151E;
+  --color-darkSoft: #233037;
+  --color-light: #FBFDFD;
+  --color-graySoft: #D5D8DB;
+  --color-textMuted: #7C7979;
+  --shadow-card: 0 4px 12px -1px rgb(0 0 0 / 0.08), 0 2px 6px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 24px -3px rgb(0 0 0 / 0.1), 0 4px 8px -4px rgb(0 0 0 / 0.06);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--light);
+  color: var(--dark);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   line-height: 1.6;
 }

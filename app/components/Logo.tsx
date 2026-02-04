@@ -14,21 +14,15 @@ export default function Logo({ href = "/", className = "", size = "sm" }: LogoPr
   const content = (
     <>
       <span className={`italic text-white ${textSize}`}>Donate</span>
-      <span className={`font-bold ${textSize}`} style={{ color: "var(--logo-blue)" }}>
-        M
-      </span>
+      <span className={`font-bold text-primary ${textSize}`}>M</span>
       <span
-        className={`inline-flex items-center justify-center rounded-full border-2 border-(--red) bg-(--red)/20 text-white font-bold shrink-0 ${iconSize}`}
+        className={`inline-flex items-center justify-center rounded-full border-2 border-primary bg-primary/20 text-white font-bold shrink-0 ${iconSize}`}
         aria-hidden
       >
         $
       </span>
-      <span className={`font-bold ${textSize}`} style={{ color: "var(--logo-blue)" }}>
-        NEY
-      </span>
-      <span className={`italic ${textSize}`} style={{ color: "var(--red)" }}>
-        Now
-      </span>
+      <span className={`font-bold text-primary ${textSize}`}>NEY</span>
+      <span className={`italic text-primary ${textSize}`}>Now</span>
     </>
   );
 

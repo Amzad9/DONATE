@@ -3,19 +3,17 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Palette, Sliders, Zap, BarChart3, RefreshCw, Shield, TrendingUp } from "lucide-react";
+import { BarChart3, RefreshCw, Shield, TrendingUp } from "lucide-react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const WHAT_WE_DELIVER_TABS = [
-  { id: "intelligence", label: "Political Intelligence", content: { title: "Political Intelligence", body: "Potomac is a media buying tool built for political with specialized automation, integrations, fast electronic ordering and more all in one unified platform — spend time on what matters." } },
-  { id: "media", label: "Political Media Buying", content: { title: "Political Media Buying", body: "Reach voters across TV, digital, and streaming with data-driven planning and execution. Manage budgets, track performance, and optimize in real time." } },
-  { id: "trends", label: "Media Trends", content: { title: "Media Trends", body: "Stay ahead with insights on viewership, ad spend, and competitive intelligence. Make informed decisions with up-to-date market data." } },
-  { id: "insights", label: "Detailed Local Insights", content: { title: "Detailed Local Insights", body: "Hyper-local data and analytics for state and local campaigns. Understand your districts and target with precision." } },
+  { id: "political", label: "Political Campaigns", image: "/new/political.png", content: { title: "Political Campaigns", body: "Federal, state & local campaigns, PACs, and political organizations. FEC compliance, contribution limits, and donor management built for political fundraising.", exploreLink: "/political-campaigns", exploreLabel: "Explore Political Campaigns" } },
+  { id: "nonprofits", label: "Churches & Non-Profits", image: "/new/nonprofit.png", content: { title: "Churches & Non-Profits", body: "Online giving, text-to-give, recurring donations, and donor management for 501(c)(3) charities, churches, and mission-driven organizations.", exploreLink: "/churches-nonprofits", exploreLabel: "Explore Churches & Non-Profits" } },
 ] as const;
 
 export default function Home() {
-  const [activeDeliverTab, setActiveDeliverTab] = useState<string>("intelligence");
+  const [activeDeliverTab, setActiveDeliverTab] = useState<string>("political");
 
   return (
     <div className="">
@@ -44,10 +42,10 @@ export default function Home() {
                   Learn More
                 </Link>
                 <Link
-                  href="#demo"
+                  href="/pricing"
                   className="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold text-sm sm:text-base bg-primary hover:bg-primary-dark text-white transition-colors"
                 >
-                  Schedule a Demo
+                  Get Started
                 </Link>
               </div>
             </div>
@@ -92,7 +90,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             <div className="relative rounded-2xl overflow-hidden shadow-card aspect-4/3 lg:aspect-auto lg:min-h-[320px]">
               <Image
-                src="https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/new/transparnt.png"
                 alt="Diverse team of professionals collaborating in an office"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -159,13 +157,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Deliver - white section with tabs + 2-column content */}
-      <section className="py-16 bg-white">
+      {/* Who We Serve - tabs + image + cards */}
+      <section id="learn" className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
-            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">What We Deliver</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">Who We Serve</h2>
             <p className="text-lg text-textMuted max-w-2xl">
-              Donate Money Now provides all the tools you need to receive online donations, manage your donors, and track your fundraising progress, all in one place.
+              Donate Money Now helps campaigns and mission-driven organizations raise funds online. Explore what we deliver and choose your path below.
             </p>
           </div>
 
@@ -177,7 +175,7 @@ export default function Home() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveDeliverTab(tab.id)}
-                  className={`px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors ${
+                  className={`px-4 py-3 text-sm font-semibold cursor-pointer uppercase tracking-wide transition-colors ${
                     activeDeliverTab === tab.id
                       ? "text-primary border-b-2 border-primary"
                       : "text-textMuted hover:text-dark border-b-2 border-transparent"
@@ -189,12 +187,13 @@ export default function Home() {
             </nav>
           </div>
 
-          {/* Two-column content */}
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          {/* Two-column: image + tab content */}
+          <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
             <div className="relative rounded-2xl overflow-hidden shadow-card aspect-video lg:min-h-[320px]">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-                alt="Analytics and data dashboard"
+                key={activeDeliverTab}
+                src={WHAT_WE_DELIVER_TABS.find((t) => t.id === activeDeliverTab)?.image ?? "/new/political.png"}
+                alt={WHAT_WE_DELIVER_TABS.find((t) => t.id === activeDeliverTab)?.content.title ?? "What we deliver"}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -205,9 +204,15 @@ export default function Home() {
                 activeDeliverTab === tab.id ? (
                   <div key={tab.id}>
                     <h3 className="text-2xl font-bold text-dark mb-4">{tab.content.title}</h3>
-                    <p className="text-textMuted text-lg leading-relaxed">
+                    <p className="text-textMuted text-lg leading-relaxed mb-6">
                       {tab.content.body}
                     </p>
+                    <Link
+                      href={tab.content.exploreLink}
+                      className="text-primary font-semibold text-sm inline-flex items-center gap-1 hover:underline"
+                    >
+                      {tab.content.exploreLabel} <span aria-hidden>→</span>
+                    </Link>
                   </div>
                 ) : null
               )}
@@ -237,7 +242,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative rounded-2xl p-10 shadow-card border border-darkSoft text-center min-w-[300px] max-w-sm overflow-hidden">
                 {/* Subtle accent gradient at top */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-dark" aria-hidden />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-primary to-dark" aria-hidden />
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
                   <TrendingUp className="w-7 h-7 text-primary" />
                 </div>
@@ -343,13 +348,13 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" },
-              { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" },
-              { title: "How XO Marriage Transformed Donor Experience with Donate Money Now", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+              { title: "How Houston Campaign Streamlined Fundraising", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "/new/Campaign.png" },
+              { title: "How Superior Donor Support Made a Real Impact For ICAN", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "/new/Donor.png" },
+              { title: "How XO Marriage Transformed Donor Experience with Donate Money Now", desc: "Learn how a local campaign increased donations by 300% using Donate Money Now tools.", img: "/new/xo.png" },
             ].map((card) => (
               <article key={card.title} className="bg-white rounded-2xl overflow-hidden shadow-card flex flex-col">
                 <div className="relative aspect-video w-full">
-                  <Image src={card.img} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                  <Image src={card.img} alt={card.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-lg font-bold text-dark mb-2">{card.title}</h3>
@@ -478,7 +483,7 @@ export default function Home() {
               Get Started with Donate Money Now
             </Link>
             <Link
-              href="#solutions"
+              href="/political-campaigns"
               className="inline-flex justify-center items-center px-10 py-4 rounded-lg font-semibold text-lg bg-white/10 border-2 border-white/30 text-white hover:bg-white/20 transition-colors"
             >
               Explore Solutions

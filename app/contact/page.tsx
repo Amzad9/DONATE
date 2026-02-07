@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Mail, Phone, Send } from "lucide-react";
+import { Phone, Send } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -21,17 +21,8 @@ export default function ContactPage() {
       <Header />
       <main className="pt-18">
         {/* Banner with image */}
-        <section className="relative py-16 lg:py-20 min-h-[280px] flex items-center">
-          <div className="absolute inset-0" aria-hidden>
-            <Image
-              src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover object-center"
-              priority
-            />
-          </div>
+        <section className="relative py-16 lg:py-20 min-h-[280px] flex items-center bg-[url('/banner/contact.png')] bg-cover bg-center">
+        
           <div className="absolute inset-0 bg-darkSoft/85" aria-hidden />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -144,20 +135,6 @@ export default function ContactPage() {
                 <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-card border border-gray-200/60 sticky top-28 transition-all duration-200 hover:shadow-lg hover:border-primary/20">
                   <h3 className="text-lg font-bold text-dark mb-6">Contact info</h3>
                   <ul className="space-y-5">
-                    <li className="flex items-start gap-4">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        <Mail className="w-5 h-5" />
-                      </span>
-                      <div>
-                        <p className="text-sm font-medium text-textMuted">Email</p>
-                        <a
-                          href="mailto:support@donatemoneynow.com"
-                          className="text-dark font-medium hover:text-primary transition-colors"
-                        >
-                          support@donatemoneynow.com
-                        </a>
-                      </div>
-                    </li>
                     <li className="flex items-start gap-4">
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                         <Phone className="w-5 h-5" />

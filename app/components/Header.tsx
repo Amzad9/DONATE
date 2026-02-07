@@ -53,16 +53,16 @@ export default function Header() {
           {/* Desktop Navigation - 5 links */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
-              href="/#features"
+              href="/"
               className="text-white/90 hover:text-white font-medium transition-colors text-[15px]"
             >
               Platform
             </Link>
             <Link
-              href="/solutions"
+              href="/political-campaigns"
               className="text-white/90 hover:text-white font-medium transition-colors text-[15px]"
             >
-              Solutions
+              Political Campaigns
             </Link>
             <Link
               href="/churches-nonprofits"
@@ -87,7 +87,7 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
             <Link
-              href="/#start"
+              href="/contact"
               className="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-[15px] transition-colors"
             >
               Start Donating
@@ -151,14 +151,14 @@ export default function Header() {
                 Platform
               </Link>
               <Link
-                href="/#solutions"
+                href="/political-campaigns"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-white/90 hover:text-white hover:bg-white/5 font-medium py-3 px-4 rounded-lg transition-colors"
               >
-                Solutions
+                Political Campaigns
               </Link>
               <Link
-                href="/#solutions"
+                href="/churches-nonprofits"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-white/90 hover:text-white hover:bg-white/5 font-medium py-3 px-4 rounded-lg transition-colors"
               >
@@ -180,7 +180,7 @@ export default function Header() {
               </Link>
               <div className="pt-4 mt-4 border-t border-white/10">
                 <Link
-                  href="/#start"
+                  href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-semibold transition-colors"
                 >

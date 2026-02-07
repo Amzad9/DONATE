@@ -9,25 +9,14 @@ export default function ChurchesNonprofitsPage() {
     <div className="min-h-screen bg-light">
       <Header />
       <main className="pt-18">
-        {/* Banner with image */}
-        <section className="relative py-16 lg:py-20 min-h-[280px] flex items-center">
-          <div className="absolute inset-0" aria-hidden>
-            <Image
-              src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover object-center"
-              priority
-            />
-          </div>
+        <section className="relative py-16 lg:py-20 min-h-[280px] flex items-center bg-[url('/banner/Nonprofits.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-darkSoft/85" aria-hidden />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Churches & Nonprofits
+              Nonprofits &amp; Churches
             </h1>
             <p className="text-lg lg:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Grow your community with secure, easy online giving. No monthly fees—just simple processing so more of every gift goes to your mission.
+              Grow your community with secure, easy online giving. Flat $20/month and donor-covered fees so more of every gift goes to your mission.
             </p>
           </div>
         </section>
@@ -79,7 +68,7 @@ export default function ChurchesNonprofitsPage() {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
               <div className="relative rounded-2xl overflow-hidden shadow-card aspect-4/3 lg:aspect-auto lg:min-h-[320px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80"
+                  src="/new/p.png"
                   alt="Community and volunteers at a church or nonprofit event"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -184,32 +173,31 @@ export default function ChurchesNonprofitsPage() {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-white rounded-2xl p-10 shadow-card border border-gray-200/60">
-                <p className="text-dark leading-relaxed mb-6 text-base">
+              <div className="group bg-white rounded-2xl p-10 shadow-card border border-gray-200/60 transition-all duration-200 hover:bg-primary hover:border-primary hover:shadow-lg">
+                <p className="text-dark group-hover:text-white/90 leading-relaxed mb-6 text-base transition-colors">
                   &ldquo;Our church doubled online giving in the first year. Text-to-give is a hit on Sundays, and we love that there are no monthly fees.&rdquo;
                 </p>
-                <p className="font-semibold text-dark text-base">Stewardship Director</p>
-                <p className="text-textMuted text-sm mt-1">Community Church, Midwest</p>
+                <p className="font-semibold text-dark group-hover:text-white text-base transition-colors">Stewardship Director</p>
+                <p className="text-textMuted group-hover:text-white/80 text-sm mt-1 transition-colors">Community Church, Midwest</p>
               </div>
-              <div className="bg-white rounded-2xl p-10 shadow-card border border-gray-200/60">
-                <p className="text-dark leading-relaxed mb-6 text-base">
+              <div className="group bg-white rounded-2xl p-10 shadow-card border border-gray-200/60 transition-all duration-200 hover:bg-primary hover:border-primary hover:shadow-lg">
+                <p className="text-dark group-hover:text-white/90 leading-relaxed mb-6 text-base transition-colors">
                   &ldquo;Our nonprofit saw a 5x increase in recurring donations. The donor management tools are excellent, and the support team understands our compliance needs.&rdquo;
                 </p>
-                <p className="font-semibold text-dark text-base">Executive Director</p>
-                <p className="text-textMuted text-sm mt-1">501(c)(3) Advocacy Organization</p>
+                <p className="font-semibold text-dark group-hover:text-white text-base transition-colors">Executive Director</p>
+                <p className="text-textMuted group-hover:text-white/80 text-sm mt-1 transition-colors">501(c)(3) Advocacy Organization</p>
               </div>
-              <div className="bg-white rounded-2xl p-10 shadow-card border border-gray-200/60">
-                <p className="text-dark leading-relaxed mb-6 text-base">
+              <div className="group bg-white rounded-2xl p-10 shadow-card border border-gray-200/60 transition-all duration-200 hover:bg-primary hover:border-primary hover:shadow-lg">
+                <p className="text-dark group-hover:text-white/90 leading-relaxed mb-6 text-base transition-colors">
                   &ldquo;Setup was quick and our congregation adopted it right away. Reporting is clear and we finally have one place for all our donor data.&rdquo;
                 </p>
-                <p className="font-semibold text-dark text-base">Finance Manager</p>
-                <p className="text-textMuted text-sm mt-1">Regional Ministry Network</p>
+                <p className="font-semibold text-dark group-hover:text-white text-base transition-colors">Finance Manager</p>
+                <p className="text-textMuted group-hover:text-white/80 text-sm mt-1 transition-colors">Regional Ministry Network</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Final CTA - same as home */}
         <section className="py-16 bg-darkSoft">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -234,6 +222,7 @@ export default function ChurchesNonprofitsPage() {
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

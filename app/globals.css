@@ -3,8 +3,10 @@
 /* Project color theme - use in className via var(--name) */
 :root {
   /* Primary brand - buttons, links, highlights, icons */
-  --primary: #2DA2B5;
-  --primary-dark: #258a9a;
+  /* --primary: #2DA2B5;
+  --primary-dark: #258a9a; */
+  --primary: #DC143C;
+  --primary-dark: #DC143C;
   /* Dark UI - hero, navbar, footer, panels */
   --dark: #06151E;
   --darkSoft: #233037;
@@ -21,8 +23,8 @@
 
 /* Theme values must be literal for Tailwind to generate bg-primary, text-primary, etc. */
 @theme inline {
-  --color-primary: #2DA2B5;
-  --color-primary-dark: #258a9a;
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
   --color-dark: #06151E;
   --color-darkSoft: #233037;
   --color-light: #FBFDFD;

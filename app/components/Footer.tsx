@@ -29,13 +29,21 @@ export default function Footer() {
             {/* Column 1: Logo + Social */}
             <div>
               <Link href="/" className="inline-block relative h-10 w-50 sm:h-12 sm:w-[240px] mb-4">
-                <Image
+                {/* <Image
                   src="/DMNLogo.png"
                   alt="Donate Money Now"
                   className="object-contain object-left"
                   width={240}
                   height={100}
-                />
+                /> */}
+                 <Image
+                src="/logo-h2 1.png"
+                alt="Donate Money Now"
+                className=""
+                width={120}
+                height={50}
+                priority
+              />
               </Link>
            
             </div>

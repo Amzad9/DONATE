@@ -40,11 +40,11 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="block relative  w-45 sm:h-20 sm:w-50">
               <Image
-                src="/DMNLogo.png"
+                src="/logo-h2 1.png"
                 alt="Donate Money Now"
-                fill
-                className="object-contain object-left"
-                sizes="220px"
+                className=""
+                width={120}
+                height={50}
                 priority
               />
             </Link>

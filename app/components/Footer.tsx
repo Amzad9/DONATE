@@ -28,20 +28,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-5">
             {/* Column 1: Logo + Social */}
             <div>
-              <Link href="/" className="inline-block relative h-10 w-50 sm:h-12 sm:w-[240px] mb-4">
-                {/* <Image
-                  src="/DMNLogo.png"
-                  alt="Donate Money Now"
-                  className="object-contain object-left"
-                  width={240}
-                  height={100}
-                /> */}
+              <Link href="/" className="inline-block relative mb-4">
+              
                  <Image
-                src="/logo-h2 1.png"
+                src="/DMNLogo.jpg"
                 alt="Donate Money Now"
                 className=""
-                width={120}
-                height={50}
+                width={300}
+                height={70}
                 priority
               />
               </Link>

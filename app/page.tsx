@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <section
         className="relative mt-18 min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[80vh] py-12 sm:py-16 lg:py-20 flex items-center"
-        style={{ backgroundImage: "url('/hero5.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
+        style={{ backgroundImage: "url('/hero4.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full mx-auto">

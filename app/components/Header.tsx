@@ -32,19 +32,19 @@ export default function Header() {
     <header className="fixed w-full top-0 z-100 bg-darkSoft border-b border-white/10">
       <nav
         className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 relative z-100 ${
-          isScrolled ? "py-0" : "py-1"
+          isScrolled ? "py-3" : "py-4"
         }`}
       >
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="block relative  w-45 sm:h-20 sm:w-50">
+            <Link href="/" className="block">
               <Image
-                src="/logo-h2 1.png"
+                src="/DMNLogo.jpg"
                 alt="Donate Money Now"
                 className=""
-                width={120}
-                height={50}
+                width={300}
+                height={40}
                 priority
               />
             </Link>

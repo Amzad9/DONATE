@@ -31,7 +31,7 @@ export default function Footer() {
               <Link href="/" className="inline-block relative mb-4">
               
                  <Image
-                src="/DMNLogo.jpg"
+                src="/DMNFinal.jpg"
                 alt="Donate Money Now"
                 className=""
                 width={300}

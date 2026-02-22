@@ -45,7 +45,7 @@ export default function PricingPage() {
         </h3>
 
         <p className="text-2xl font-bold text-primary mb-5">
-          $20/month
+          $10/month
         </p>
 
         <ul className="space-y-3 text-textMuted flex-1 text-sm sm:text-base mb-6">

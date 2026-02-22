@@ -90,7 +90,7 @@ export default function Header() {
               href="/contact"
               className="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-[15px] transition-colors"
             >
-              Start Donating
+              Start Fundraising
             </Link>
           </div>
 

@@ -24,17 +24,17 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full mx-auto">
-            <div className="flex flex-col justify-center text-center lg:text-left order-2 lg:order-1">
+            <div className="flex flex-col justify-start md:justify-center text-left md:text-left order-2 lg:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-4 sm:mb-6">
                  Donate Money Now.
                 <br />
                 <span className="text-primary capitalize">fueling impact</span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8 lg:mb-10 font-medium px-0">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-white/90  leading-relaxed max-w-[230px] md:max-w-xl lg:mx-0 mb-6 sm:mb-8 lg:mb-10 font-medium px-0">
                 Powerful Fundraising Software for Campaigns, Churches, & Non-Profits
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <div className="flex sm:flex-row gap-3 sm:gap-4 justify-start">
                 <Link
                   href="#learn"
                   className="inline-flex justify-center items-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold text-sm sm:text-base border-2 border-primary text-primary hover:bg-primary/10 transition-colors"

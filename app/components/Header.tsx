@@ -82,6 +82,12 @@ export default function Header() {
             >
               Contact
             </Link>
+            <Link
+              href="/careers"
+              className="text-white/90 hover:text-white font-medium transition-colors text-[15px]"
+            >
+              Careers
+            </Link>
           </div>
 
           {/* Desktop CTA */}
@@ -194,6 +200,13 @@ export default function Header() {
                 className="text-white/90 hover:text-white hover:bg-white/5 font-medium py-3 px-4 rounded-lg transition-colors"
               >
                 Contact
+              </Link>
+              <Link
+                href="/careers"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white/90 hover:text-white hover:bg-white/5 font-medium py-3 px-4 rounded-lg transition-colors"
+              >
+                Careers
               </Link>
               <div className="pt-4 mt-4 border-t border-white/10">
                 <Link

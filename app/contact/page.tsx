@@ -109,7 +109,7 @@ export default function ContactPage() {
                     )}
                     {status === "error" && (
                       <p className="text-sm font-medium text-primary">
-                        Something went wrong. Please try again or email us directly.
+                        Something went wrong. Please try again.
                       </p>
                     )}
                     <button
